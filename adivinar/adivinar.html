@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<title> ADIVINA EL NÚMERO</title> <!-- Referenciamos al link de fuentes de google-->
+            <meta name="adivinar numero" content="Un juego muy divertido de adivinar numeros!">
+			<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+		
+    <style>
+    *{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Mali', cursive;
+}
+
+header h1{ 
+  display:block;
+  width:50%;
+  text-align:center;
+  margin:20px auto;
+  background-color: yellowgreen;
+  border-radius: 20px;
+  padding:30px;
+}
+.content{
+  width:100%;
+  overflow: hidden;
+}
+/*----------------------------------------------*/
+.entrada{
+  width:40%;
+  display: block;
+  margin:20px auto;
+  text-align: center;
+  background-color: black;
+  padding:15px 20px;
+  overflow: hidden;
+}
+#input1{
+  margin-left: 10px;
+  padding:2px;
+}
+  #opciones{
+          margin-left: 10px;
+  padding:2px;    
+            
+        }
+        
+.entrada button{
+  display: block;
+  width:60px;
+  margin:10px auto;
+}
+.result{
+  text-align: center;
+  width:40%;
+  margin:20px auto;
+  background-color: red;
+  border-radius:2px 20px 20px;
+  padding:10px 0;
+  display: none;
+}
+#num{
+  margin:10px auto;
+  color:white;
+}
+p{
+  text-align: center;
+}
+#used{
+  text-align: center;
+  width:40%;
+  display: block;
+  margin:20px auto;
+  background-color: rgb(185, 205, 25);
+  border-radius:2px 20px 20px;
+  padding:10px 0;
+}
+#boton2{
+  display: block;
+  margin:10px auto;
+  width:100px;
+  padding:5px;
+}
+        
+    
+    </style>
+    </head>
+    
+		<body>
+			<header>
+				<h1>ADIVINAR EL NÚMERO</h1>
+			</header>
+			<div class="content">
+				<p>Tienes que adivinar un número entre 1 y 100</p>
+				<div class="entrada"><!--llamamos a la clase formulario la cual contiene el input donde introduciremos el numero que creamos es el queha pensado la maquina-->
+						<label for="input1">teclee su numero: </label>
+						<input name="input1" id="input1" type="text"/><!--Introducimos aqui el número -->
+						<button name="boton1" id="boton1" onclick="compara()">Aceptar</button><!-- al clickar aceptar, llamamos a la funcion compara que se encarga de comparar el numero del PC con el proporcionado por el usuario  -->
+						<button name="boton2" id="boton2" onclick="location.reload()">Refrescar</button>
+						<select id="opciones">
+						    <option id=1 value="1">IMPOSIBLE</option>
+						    <option id=2 value="5">MEDIO</option>
+						    <option id=3 value="10">FACIL</option>
+						</select>
+				</div>
+				<div class="result" id="resultado">
+					<h3 id="texto1">El numero es o no es </h3>
+					<h3 id="num">50</h3>
+				</div>
+				<div id="used"><!-- DIV de recuento de intentos y elementos usados  -->
+					<p id="usados">Elementos usados:</p>
+					<p id="tries">Intentos:0</p>
+				</div>
+			</div>
+			<script src="adivinar.js"></script>
+		</body>
+</html>
+
